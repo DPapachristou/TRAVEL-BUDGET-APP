@@ -1,4 +1,4 @@
-import Header from "./Navbar";
+import Header from "./COMPONENTS/Navbar";
 import Home from "./PAGES/Home";
 import Balance from "./PAGES/Balance";
 import History from "./PAGES/History";
