@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Header() {
   return (
@@ -13,14 +14,21 @@ function Header() {
       data-bs-theme="light"
     >
       <Container>
-        <Navbar.Brand href="#home">TRAVEL BUDGET APP</Navbar.Brand>
+        <Navbar.Brand href="/">TRAVEL BUDGET APP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">HOME</Nav.Link>
-            <Nav.Link href="#link">BALANCE</Nav.Link>
-            <Nav.Link href="#link">HISTORY</Nav.Link>
-            <Nav.Link href="#link">LOGIN</Nav.Link>
+            <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/balance">BALANCE</Nav.Link>
+            <Nav.Link href="/history">HISTORY</Nav.Link>
+            <NavDropdown title="MY ACCOUNT" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/login">LOGIN</NavDropdown.Item>
+              <NavDropdown.Item href="/myAccount">MY ACCOUNT</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/createAccount">
+                CREATE ACCOUNT
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
